@@ -22,6 +22,7 @@ rollbar.log('Hello world!')
 // VV my code
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/index.html'))
+    rollbar.info('html file served successfully')
 })
 
 // app.get('/styles', (req, res) => {
