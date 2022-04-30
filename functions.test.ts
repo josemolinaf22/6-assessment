@@ -1,11 +1,17 @@
 const {shuffleArray} = require('./utils')
 
+let testArr = [1,2,3,4]
+
+
 describe('shuffleArray test', () => {
 
-    it('should test shuffleArray return array', () => {
-        expect(typeof shuffleArray).toBe('function')
+    test('should test shuffleArray return array', () => {
+        // expect(typeof shuffleArray).toBe('function')
+        expect(Array.isArray(shuffleArray(testArr))).toBe(true)
+
     })
-    // test('should check the length is the same', ()=>{
-    //     expect(shuffleArray).toHaveLength(10)
-    // })
+    it('should check the length is the same', ()=>{
+        // expect(shuffleArray(testArr)).toHaveLength(10)
+        expect(shuffleArray(testArr)).toHaveLength(testArr.length)
+    })
 })
